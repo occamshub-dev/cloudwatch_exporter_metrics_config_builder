@@ -18,4 +18,4 @@ aws --region="$1" cloudwatch list-metrics --namespace=AWS/Usage > cloudwatch_con
 ./custom_gather.sh $1 $2 # $1: REGION. $2: CUSTOM
 python3 main.py
 cd cloudwatch_config_builder
-ansible-playbook --ask-become-pass -vvv main.yml
+ansible-playbook main.yml --extra-vars "region=$1"

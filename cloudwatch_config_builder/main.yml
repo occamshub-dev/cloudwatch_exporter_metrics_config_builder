@@ -1,6 +1,5 @@
 ---
 - hosts: cloudwatch_exporter
-  become: true
 
   pre_tasks:
     - name: Load Configuration.

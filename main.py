@@ -29,7 +29,12 @@ def format_metrics_yml_file(namespace, metric_dict, file_name):
 
 
 def main(file_name):
-    x = list(json.load(open(f"cloudwatch_metric_json/{file_name}")).values())[0]
+    print("Processing file: ", file_name, "...)")
+    if not file_name.endswith(".json"):
+        return
+    x = list(json.load(open(f"cloudwatch_config_builder/files/cloudwatch_metrics/{file_name}")).values())[0]
+    if not x:
+        return
     metric_name_set = {''}
     metric_namespace = x[0].get("Namespace")
 
@@ -58,6 +63,6 @@ def main(file_name):
 
 
 if __name__ == '__main__':
-    files = os.listdir("cloudwatch_metric_json")
+    files = os.listdir("cloudwatch_config_builder/files/cloudwatch_metrics/")
     for file in files:
         main(file)
