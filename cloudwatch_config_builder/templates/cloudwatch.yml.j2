@@ -7,9 +7,9 @@ metrics:
 {% for metric in auto_scaling_metrics %}
 - aws_namespace: {{ metric.aws_namespace }}
   aws_metric_name: {{ metric.aws_metric_name }}
-  aws_dimensions: {{ metric.aws_dimensions | regex_replace("u") | regex_replace("'") }}
+  aws_dimensions: {{ metric.aws_dimensions }}
 {% if metric.aws_statistics != [] %}
-  aws_statistics: {{ metric.aws_statistics | regex_replace("u'") | regex_replace("'" ) }}
+  aws_statistics: {{ metric.aws_statistics }}
 {% endif %}
 
 {% endfor %}
@@ -19,9 +19,9 @@ metrics:
 {% for metric in billing_metrics %}
 - aws_namespace: {{ metric.aws_namespace }}
   aws_metric_name: {{ metric.aws_metric_name }}
-  aws_dimensions: {{ metric.aws_dimensions | regex_replace("u") | regex_replace("'") }}
+  aws_dimensions: {{ metric.aws_dimensions }}
 {% if metric.aws_statistics != [] %}
-  aws_statistics: {{ metric.aws_statistics | regex_replace("u'") | regex_replace("'" ) }}
+  aws_statistics: {{ metric.aws_statistics }}
 {% endif %}
 
 {% endfor %}
@@ -31,9 +31,9 @@ metrics:
 {% for metric in custom_metrics %}
 - aws_namespace: {{ metric.aws_namespace }}
   aws_metric_name: {{ metric.aws_metric_name }}
-  aws_dimensions: {{ metric.aws_dimensions | regex_replace("u") | regex_replace("'") }}
+  aws_dimensions: {{ metric.aws_dimensions }}
 {% if metric.aws_statistics != [] %}
-  aws_statistics: {{ metric.aws_statistics | regex_replace("u'") | regex_replace("'" ) }}
+  aws_statistics: {{ metric.aws_statistics }}
 {% endif %}
 
 {% endfor %}
@@ -43,9 +43,9 @@ metrics:
 {% for metric in dynamo_db_metrics %}
 - aws_namespace: {{ metric.aws_namespace }}
   aws_metric_name: {{ metric.aws_metric_name }}
-  aws_dimensions: {{ metric.aws_dimensions | regex_replace("u") | regex_replace("'") }}
+  aws_dimensions: {{ metric.aws_dimensions }}
 {% if metric.aws_statistics != [] %}
-  aws_statistics: {{ metric.aws_statistics | regex_replace("u'") | regex_replace("'" ) }}
+  aws_statistics: {{ metric.aws_statistics }}
 {% endif %}
 
 {% endfor %}
@@ -55,9 +55,9 @@ metrics:
 {% for metric in ebs_metrics %}
 - aws_namespace: {{ metric.aws_namespace }}
   aws_metric_name: {{ metric.aws_metric_name }}
-  aws_dimensions: {{ metric.aws_dimensions | regex_replace("u") | regex_replace("'") }}
+  aws_dimensions: {{ metric.aws_dimensions }}
 {% if metric.aws_statistics != [] %}
-  aws_statistics: {{ metric.aws_statistics | regex_replace("u'") | regex_replace("'" ) }}
+  aws_statistics: {{ metric.aws_statistics }}
 {% endif %}
 
 {% endfor %}
@@ -67,9 +67,9 @@ metrics:
 {% for metric in ec2_metrics %}
 - aws_namespace: {{ metric.aws_namespace }}
   aws_metric_name: {{ metric.aws_metric_name }}
-  aws_dimensions: {{ metric.aws_dimensions | regex_replace("u") | regex_replace("'") }}
+  aws_dimensions: {{ metric.aws_dimensions }}
 {% if metric.aws_statistics != [] %}
-  aws_statistics: {{ metric.aws_statistics | regex_replace("u'") | regex_replace("'" ) }}
+  aws_statistics: {{ metric.aws_statistics }}
 {% endif %}
 
 {% endfor %}
@@ -79,9 +79,9 @@ metrics:
 {% for metric in elasti_cache_metrics %}
 - aws_namespace: {{ metric.aws_namespace }}
   aws_metric_name: {{ metric.aws_metric_name }}
-  aws_dimensions: {{ metric.aws_dimensions | regex_replace("u") | regex_replace("'") }}
+  aws_dimensions: {{ metric.aws_dimensions }}
 {% if metric.aws_statistics != [] %}
-  aws_statistics: {{ metric.aws_statistics | regex_replace("u'") | regex_replace("'" ) }}
+  aws_statistics: {{ metric.aws_statistics }}
 {% endif %}
 
 {% endfor %}
@@ -91,9 +91,9 @@ metrics:
 {% for metric in events_metrics %}
 - aws_namespace: {{ metric.aws_namespace }}
   aws_metric_name: {{ metric.aws_metric_name }}
-  aws_dimensions: {{ metric.aws_dimensions | regex_replace("u") | regex_replace("'") }}
+  aws_dimensions: {{ metric.aws_dimensions }}
 {% if metric.aws_statistics != [] %}
-  aws_statistics: {{ metric.aws_statistics | regex_replace("u'") | regex_replace("'" ) }}
+  aws_statistics: {{ metric.aws_statistics }}
 {% endif %}
 
 {% endfor %}
@@ -103,9 +103,9 @@ metrics:
 {% for metric in lambda_metrics %}
 - aws_namespace: {{ metric.aws_namespace }}
   aws_metric_name: {{ metric.aws_metric_name }}
-  aws_dimensions: {{ metric.aws_dimensions | regex_replace("u") | regex_replace("'") }}
+  aws_dimensions: {{ metric.aws_dimensions }}
 {% if metric.aws_statistics != [] %}
-  aws_statistics: {{ metric.aws_statistics | regex_replace("u'") | regex_replace("'" ) }}
+  aws_statistics: {{ metric.aws_statistics }}
 {% endif %}
 
 {% endfor %}
@@ -115,9 +115,9 @@ metrics:
 {% for metric in logs_metrics %}
 - aws_namespace: {{ metric.aws_namespace }}
   aws_metric_name: {{ metric.aws_metric_name }}
-  aws_dimensions: {{ metric.aws_dimensions | regex_replace("u") | regex_replace("'") }}
+  aws_dimensions: {{ metric.aws_dimensions }}
 {% if metric.aws_statistics != [] %}
-  aws_statistics: {{ metric.aws_statistics | regex_replace("u'") | regex_replace("'" ) }}
+  aws_statistics: {{ metric.aws_statistics }}
 {% endif %}
 
 {% endfor %}
@@ -127,9 +127,9 @@ metrics:
 {% for metric in network_elb_metrics %}
 - aws_namespace: {{ metric.aws_namespace }}
   aws_metric_name: {{ metric.aws_metric_name }}
-  aws_dimensions: {{ metric.aws_dimensions | regex_replace("u") | regex_replace("'") }}
+  aws_dimensions: {{ metric.aws_dimensions }}
 {% if metric.aws_statistics != [] %}
-  aws_statistics: {{ metric.aws_statistics | regex_replace("u'") | regex_replace("'" ) }}
+  aws_statistics: {{ metric.aws_statistics }}
 {% endif %}
 
 {% endfor %}
@@ -139,9 +139,9 @@ metrics:
 {% for metric in rds_metrics %}
 - aws_namespace: {{ metric.aws_namespace }}
   aws_metric_name: {{ metric.aws_metric_name }}
-  aws_dimensions: {{ metric.aws_dimensions | regex_replace("u") | regex_replace("'") }}
+  aws_dimensions: {{ metric.aws_dimensions }}
 {% if metric.aws_statistics != [] %}
-  aws_statistics: {{ metric.aws_statistics | regex_replace("u'") | regex_replace("'" ) }}
+  aws_statistics: {{ metric.aws_statistics }}
 {% endif %}
 
 {% endfor %}
@@ -151,9 +151,9 @@ metrics:
 {% for metric in s3_metrics %}
 - aws_namespace: {{ metric.aws_namespace }}
   aws_metric_name: {{ metric.aws_metric_name }}
-  aws_dimensions: {{ metric.aws_dimensions | regex_replace("u") | regex_replace("'") }}
+  aws_dimensions: {{ metric.aws_dimensions }}
 {% if metric.aws_statistics != [] %}
-  aws_statistics: {{ metric.aws_statistics | regex_replace("u'") | regex_replace("'" ) }}
+  aws_statistics: {{ metric.aws_statistics }}
 {% endif %}
 
 {% endfor %}
@@ -163,9 +163,9 @@ metrics:
 {% for metric in transit_gateway_metrics %}
 - aws_namespace: {{ metric.aws_namespace }}
   aws_metric_name: {{ metric.aws_metric_name }}
-  aws_dimensions: {{ metric.aws_dimensions | regex_replace("u") | regex_replace("'") }}
+  aws_dimensions: {{ metric.aws_dimensions }}
 {% if metric.aws_statistics != [] %}
-  aws_statistics: {{ metric.aws_statistics | regex_replace("u'") | regex_replace("'" ) }}
+  aws_statistics: {{ metric.aws_statistics }}
 {% endif %}
 
 {% endfor %}
@@ -175,9 +175,9 @@ metrics:
 {% for metric in trusted_advisor_metrics %}
 - aws_namespace: {{ metric.aws_namespace }}
   aws_metric_name: {{ metric.aws_metric_name }}
-  aws_dimensions: {{ metric.aws_dimensions | regex_replace("u") | regex_replace("'") }}
+  aws_dimensions: {{ metric.aws_dimensions }}
 {% if metric.aws_statistics != [] %}
-  aws_statistics: {{ metric.aws_statistics | regex_replace("u'") | regex_replace("'" ) }}
+  aws_statistics: {{ metric.aws_statistics }}
 {% endif %}
 
 {% endfor %}
@@ -187,9 +187,9 @@ metrics:
 {% for metric in usage_metrics %}
 - aws_namespace: {{ metric.aws_namespace }}
   aws_metric_name: {{ metric.aws_metric_name }}
-  aws_dimensions: {{ metric.aws_dimensions | regex_replace("u") | regex_replace("'") }}
+  aws_dimensions: {{ metric.aws_dimensions }}
 {% if metric.aws_statistics != [] %}
-  aws_statistics: {{ metric.aws_statistics | regex_replace("u'") | regex_replace("'" ) }}
+  aws_statistics: {{ metric.aws_statistics }}
 {% endif %}
 
 {% endfor %}
